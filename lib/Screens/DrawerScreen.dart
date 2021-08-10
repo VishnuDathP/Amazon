@@ -1,4 +1,5 @@
-import 'package:amazon_clone/Models/DrawerItemsModel.dart';
+import 'package:amazon_clone/Pages/HomePage.dart';
+import 'package:amazon_clone/Routes/RoutePages.dart' as Routes;
 import 'package:amazon_clone/Routes/RoutePages.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,6 @@ class DrawerScreen extends StatefulWidget {
 
 class _DrawerScreenState extends State<DrawerScreen> {
 
-
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -21,7 +21,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
           DrawerHeaderScreen(),
           ListTile(
             title: Text('Home',style: TextStyle(fontSize: 18,color: Colors.black87),),
-            onTap: (){Navigator.pushNamed(context, Home);},
+            //onTap: (){MaterialPageRoute(builder: (BuildContext context) => HomePage() );},
+            //onTap: (){Navigator.pushNamed(context, Routes.Home);},
+            onTap: (){Navigator.pushReplacementNamed(context, Home);},
+            //onTap: (){Navigator.pop(context, (r) => r.settings.name == Routes.Home);},
           ),
           ListTile(
             title: Text('Shop by Category',style: TextStyle(fontSize: 18,color: Colors.black87),),

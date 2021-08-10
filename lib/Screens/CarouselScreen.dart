@@ -18,19 +18,19 @@ class _CarouselScreenState extends State<CarouselScreen> {
         items: [
           Image(
             image: AssetImage("assets/images/carousal.jpg"),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
           Image(
             image: AssetImage("assets/images/tea.jpg"),
-            fit: BoxFit.contain,
+            fit: BoxFit.fill,
           ),
           Image(
             image: AssetImage("assets/images/carousal1.jpg"),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           ),
           Image(
             image: AssetImage("assets/images/electronics.jpg"),
-            fit: BoxFit.cover,
+            fit: BoxFit.fill,
           )
         ],
         options: CarouselOptions(
